@@ -28,3 +28,9 @@ Actualmente, el icono está integrado en el código. Para cambiarlo, necesitarí
 == Changelog ==
 = 1.0 =
 * Versión inicial
+
+= 1.1 =
+* Añadido efecto de aparición (fade in) para el botón
+
+= 1.2 =
+* Mejor ícono de WhatsApp
