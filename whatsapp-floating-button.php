@@ -21,7 +21,8 @@ function wb_enqueue_scripts() {
 }
 add_action('wp_enqueue_scripts', 'wb_enqueue_scripts');
 
-// Generar el botón flotante
+
+// Genera el botón flotante
 function wb_display_whatsapp_button() {
     $whatsapp_number = get_option('wb_whatsapp_number', '');
     $country_code = get_option('wb_country_code', '');
@@ -38,13 +39,14 @@ function wb_display_whatsapp_button() {
 }
 add_action('wp_footer', 'wb_display_whatsapp_button');
 
-// Añadir página de configuración al menú de WordPress.
+
+// Añade la página de configuración al menú de WordPress.
 function wb_create_menu() {
     add_options_page('WhatsApp Button Settings', 'WhatsApp Button', 'manage_options', 'wb-whatsapp-button', 'wb_settings_page');
 }
 add_action('admin_menu', 'wb_create_menu');
 
-// Crear la página de configuración
+// Crea la página de configuración
 function wb_settings_page() {
     $south_american_countries = array(
         '+54' => 'Argentina',
@@ -60,7 +62,7 @@ function wb_settings_page() {
     );
     ?>
     <div class="wrap">
-        <h1>WhatsApp Button Settings</h1>
+        <h1>Configuración del botón de WhatsApp</h1>
         <form method="post" action="options.php">
             <?php
             settings_fields('wb-settings-group');
